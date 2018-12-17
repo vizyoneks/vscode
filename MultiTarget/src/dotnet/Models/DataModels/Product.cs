@@ -1,5 +1,3 @@
-using System;
-
 namespace dotnet.Models.DataModels
 {
     public class Product
@@ -10,6 +8,6 @@ namespace dotnet.Models.DataModels
 
         public string Price { get; set; }
 
-        
+
     }
 }
