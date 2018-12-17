@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using dotnet.Repositories;
 
 namespace dotnet
 {
@@ -31,6 +32,7 @@ namespace dotnet
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
         
+            services.AddScoped<IHttpClientFactoryService,HttpClientFactoryService>();
             
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
